@@ -1,0 +1,14 @@
+FROM node:VERSION
+
+WORKDIR /project
+
+RUN npm i -g npm@latest
+RUN npm i -g \
+        core-util-is \
+        isarray \
+        express \
+        @angular/cli
+
+
+ENTRYPOINT ["/bin/sh"]
+

@@ -39,7 +39,7 @@ node_build() {
     clean_state $2
 }
 
-node_build 6.14.2-alpine node6
+#node_build 6.14.2-alpine node6
 node_build 8.11.2-alpine node8
 node_build 9.11.1-alpine node9
 node_build 10.1.0-alpine node10

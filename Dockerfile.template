@@ -2,13 +2,9 @@ FROM node:VERSION
 
 WORKDIR /project
 
-RUN npm i -g npm@latest
-RUN npm i -g \
-        core-util-is \
-        isarray \
+RUN npm i -g npm@latest &&\
+    npm i -g \
         express \
         @angular/cli
 
-
-ENTRYPOINT ["/bin/sh"]
-
+CMD ["python3"]

@@ -5,6 +5,7 @@ WORKDIR /project
 RUN npm i -g npm@latest &&\
     npm i -g \
         express \
+        create-react-app \
         @angular/cli
 
-CMD ["python3"]
+CMD ["/bin/sh"]

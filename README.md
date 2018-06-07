@@ -27,6 +27,14 @@ can start varying in their state.
 The run script will mount the folder you are currently standing in to the /project folder
 in the container, which is the working directory for the image.
 
+if you add a '.' as a parameter to the command it will reset the state to the current folder if
+it already had a state.
+Note that everything you did in the container will be lost except for what is in de Dockerfile.
+
+e.g.
+`node10 .`
+
+
 # Troubleshooting
 
 It is assumed is that the `~/bin` exists and resides on the front of your PATH.

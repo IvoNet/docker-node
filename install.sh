@@ -45,4 +45,4 @@ node_build 9.11.1-alpine node9
 node_build 10.1.0-alpine node10
 
 
-docker rmi $(docker images -q -f dangling=true)
+#docker rmi $(docker images -q -f dangling=true)

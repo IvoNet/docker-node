@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-OVERRIDE=1
-ClEAN_STATE=1 # Removes existing docker states (containers) of set to 1
+OVERRIDE=0
+ClEAN_STATE=0 # Removes existing docker states (containers) of set to 1
 
 create_run_script() {
     sed "s/CONTAINER/$1/g" run.template.sh > ~/bin/$1
@@ -40,9 +40,10 @@ node_build() {
 }
 
 #node_build 6.14.2-alpine node6
-node_build 8.12.0-alpine node8
+#node_build 8.12.0-alpine node8
 #node_build 9.11.1-alpine node9
-node_build 10.11.0-alpine node10
+#node_build 10.11.0-alpine node10
+node_build 11.9.0-alpine node11
 
 
 docker rmi $(docker images -q -f dangling=true) 2>/dev/null

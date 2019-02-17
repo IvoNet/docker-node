@@ -45,7 +45,7 @@ node_build() {
 #node_build 8.12.0-alpine node8 "node:8"
 #node_build 9.11.1-alpine node9 "node:9"
 #node_build 10.11.0-alpine node10 "node:10"
-node_build 11.9.0-alpine node10 node:11
+node_build 11.9.0-alpine node11 node:11
 
 
 docker rmi $(docker images -q -f dangling=true) 2>/dev/null

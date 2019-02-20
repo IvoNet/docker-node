@@ -31,7 +31,7 @@ node_build() {
         if [ -f ~/bin/$2 ]; then
             echo "Could not create executable ~/bin/$2 as it already exists"
         else
-            create_run_script "$2" "$3"
+            create_run_script "$2" "$3" "$4"
         fi
     else
         create_run_script "$2" "$3"
@@ -40,12 +40,16 @@ node_build() {
     clean_state $2
 }
 
+
 # node_build [node alpine version] [node script name] [node:version to push]
-#node_build 6.14.2-alpine node6 "node:6"
+#node_build 6.14.2-alpine node6 "node6"
 #node_build 8.12.0-alpine node8 "node:8"
 #node_build 9.11.1-alpine node9 "node:9"
 #node_build 10.11.0-alpine node10 "node:10"
-node_build 11.9.0-alpine node11 node:11
+node_build 11.9.0-alpine node11 "node:11"
+
+#create_run_script node10 "node:10"
+#create_run_script node11 "node:11"
 
 
 docker rmi $(docker images -q -f dangling=true) 2>/dev/null

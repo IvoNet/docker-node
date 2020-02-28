@@ -6,10 +6,6 @@ RUN npm i -g npm@latest &&\
     npm i -g \
         express \
         create-react-app \
-        @angular/cli \
-        vue \
-        vue-cli \
-        vuex \
-        vuese
+        @angular/cli
 
 CMD ["/bin/sh"]

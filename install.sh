@@ -46,10 +46,13 @@ node_build() {
 #node_build 8.12.0-alpine node8 "node:8"
 #node_build 9.11.1-alpine node9 "node:9"
 #node_build 10.11.0-alpine node10 "node:10"
-node_build 11.9.0-alpine node11 "node:11"
+#node_build 11.9.0-alpine node11 "node:11"
+node_build 12.16.1-alpine3.11 node12 "node:12"
+node_build 13.8.0-alpine3.11 node13 "node:13"
 
 #create_run_script node10 "node:10"
 #create_run_script node11 "node:11"
+#create_run_script node11 "node:12"
 
 
 docker rmi $(docker images -q -f dangling=true) 2>/dev/null

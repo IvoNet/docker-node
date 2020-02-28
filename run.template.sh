@@ -26,6 +26,6 @@ else
         docker start -i ${NAME//:/}
     else
         echo "Init CONTAINER container..."
-        docker run -it --name ${NAME//:/} -v "$(pwd):/project" -p 3000:3000 ivonet/${NAME}
+        docker run -it --name ${NAME//:/} -v "$(pwd):/project" -p 4200:4200 ivonet/${NAME}
     fi
 fi
